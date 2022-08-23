@@ -6,7 +6,7 @@ sns = boto3.client('sns')
 
 def lambda_handler(event,context):
      
-    bkt = s3.Bucket('test9959')
+    bkt = s3.Bucket('bucket name')
     count =0
     for obj in bkt.objects.all():
         count+=1
@@ -14,6 +14,6 @@ def lambda_handler(event,context):
     print(count)
     if count != 0:
         print('Object found. Sending notification')
-        sns.publish(TopicArn='arn:aws:sns:us-east-1:405259030962:notif',Message='The file is uploaded. The number of submissions received are ' + str(count) , Subject='Submission received')
+        sns.publish(TopicArn='arn:aws:sns:us-east-1:xxxxxxx:notif',Message='The file is uploaded. The number of submissions received are ' + str(count) , Subject='Submission received')
     else:
         print('File was not present')
