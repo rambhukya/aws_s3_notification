@@ -1,0 +1,10 @@
+{
+  "ec2": {
+    "image-id": "ami-085925f297f89fce1",
+    "instance-type": "t2.micro",
+    "mincount": "1",
+    "maxcount": "3",
+    "key-name": "AWSTest",
+    "security-group": "serversg"
+  }
+}
