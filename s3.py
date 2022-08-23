@@ -9,7 +9,7 @@ s3 = boto3.client(
     aws_secret_access_key="",
     #aws_session_token=""
 )
-BUCKET_NAME='test9959'
+BUCKET_NAME='bucket name'
 
 @app.route('/')  
 def home():
